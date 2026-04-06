@@ -1,0 +1,761 @@
+{
+  "info": {
+    "_postman_id": "1b90df39-efe1-4e6b-b981-887989002acb",
+    "name": "restful-booker API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21821321",
+    "_collection_link": "https://go.postman.co/collection/21821321-1b90df39-efe1-4e6b-b981-887989002acb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Booking - GetBookingIds",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url_environment}}/booking?firstname=Romulo&lastname=Zirbes",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking"
+          ],
+          "query": [
+            {
+              "key": "firstname",
+              "value": "Romulo"
+            },
+            {
+              "key": "lastname",
+              "value": "Zirbes"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - GetBookingIds",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_environment}}/booking?firstname=Romulo&lastname=Zirbes",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking"
+              ],
+              "query": [
+                {
+                  "key": "firstname",
+                  "value": "Romulo"
+                },
+                {
+                  "key": "lastname",
+                  "value": "Zirbes"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:03:34 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=o1fb1yZHjsAbXmKSOB0HzlLuy4z9HnH3inzfmRBBllI%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502214\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=o1fb1yZHjsAbXmKSOB0HzlLuy4z9HnH3inzfmRBBllI%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502214\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "[]"
+        }
+      ]
+    },
+    {
+      "name": "Booking - CreateBooking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstname\" : \"Romulo\",\n    \"lastname\" : \"Zirbes\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url_environment}}/booking",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - CreateBooking",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstname\" : \"Romulo\",\n    \"lastname\" : \"Zirbes\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_environment}}/booking",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "201"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:03:41 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"c9-xEmZUnQrpo8WPQM0pEO1FJWWy6c\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=cswOgrWtsBqzNcno8TXTosARV98F7qRrXMvE2x%2FvOlM%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502221\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=cswOgrWtsBqzNcno8TXTosARV98F7qRrXMvE2x%2FvOlM%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502221\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"bookingid\": 1108,\n    \"booking\": {\n        \"firstname\": \"Romulo\",\n        \"lastname\": \"Zirbes\",\n        \"totalprice\": 111,\n        \"depositpaid\": true,\n        \"bookingdates\": {\n            \"checkin\": \"2018-01-01\",\n            \"checkout\": \"2019-01-01\"\n        },\n        \"additionalneeds\": \"Breakfast\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Auth - Create token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url_environment}}/auth",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "auth"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Auth - Create token",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_environment}}/auth",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "auth"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "27"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:03:45 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"1b-kFbO6uKecmrCnUk4t83kDrROD9M\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=nhGuaF13FD90ICHGS%2BeZubQj2ZNI345Rk9eyRQRFkIw%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502225\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=nhGuaF13FD90ICHGS%2BeZubQj2ZNI345Rk9eyRQRFkIw%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502225\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"token\": \"f442daa1b0500e3\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Booking - GetBooking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url_environment}}/booking/1108",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking",
+            "1108"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - GetBooking",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_environment}}/booking/1108",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking",
+                "1108"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "172"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:04:20 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"ac-HLbF4HWviW3sKhIkP3iz+k4qJmA\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=oiEcVAYg%2FG%2BsWzkVqLDEupTENj%2BKZ3ZfUIpyjCAgoHo%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502260\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=oiEcVAYg%2FG%2BsWzkVqLDEupTENj%2BKZ3ZfUIpyjCAgoHo%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502260\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"firstname\": \"Romulo\",\n    \"lastname\": \"Zirbes\",\n    \"totalprice\": 111,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2018-01-01\",\n        \"checkout\": \"2019-01-01\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Booking - UpdateBooking",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstname\" : \"Rômulo Anderson da Rocha\",\n    \"lastname\" : \"Zirbes\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url_environment}}/booking/1108",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking",
+            "1108"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - UpdateBooking",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "token={{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstname\" : \"Rômulo Anderson da Rocha\",\n    \"lastname\" : \"Zirbes\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_environment}}/booking/1108",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking",
+                "1108"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "191"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:04:50 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"bf-HbSDJ0WBYPJIaphaIdWQqZRxFvs\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=XicO7zKZotz01ZJ2z71FiZ0yjblefcB6N4Inc4o8d94%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502290\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=XicO7zKZotz01ZJ2z71FiZ0yjblefcB6N4Inc4o8d94%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502290\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"firstname\": \"Rômulo Anderson da Rocha\",\n    \"lastname\": \"Zirbes\",\n    \"totalprice\": 111,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2018-01-01\",\n        \"checkout\": \"2019-01-01\"\n    },\n    \"additionalneeds\": \"Breakfast\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Booking - PartialUpdateBooking",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"firstname\" : \"Romulinho\",\n    \"lastname\" : \"Zirbizinho\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url_environment}}/booking/1223",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking",
+            "1223"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - PartialUpdateBooking",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "token={{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"firstname\" : \"Romulinho\",\n    \"lastname\" : \"Zirbizinho\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_environment}}/booking/1223",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking",
+                "1223"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "181"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:04:58 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"b5-uicqv3rcTcrZrsanLilWHkYwMAE\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=lNo7Wz7QsWXyU9jRlg6BDS59HiowkcLJpQ9D%2BKaVQvA%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502298\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=lNo7Wz7QsWXyU9jRlg6BDS59HiowkcLJpQ9D%2BKaVQvA%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502298\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"firstname\": \"Romulinho\",\n    \"lastname\": \"Zirbizinho\",\n    \"totalprice\": 111,\n    \"depositpaid\": true,\n    \"bookingdates\": {\n        \"checkin\": \"2018-01-01\",\n        \"checkout\": \"2019-01-01\"\n    },\n    \"additionalneeds\": \"super bowls\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Booking - DeleteBooking",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Cookie",
+            "value": "token={{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url_environment}}/booking/1223",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "booking",
+            "1223"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Booking - DeleteBooking",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Cookie",
+                "value": "token={{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url_environment}}/booking/1223",
+              "host": [
+                "{{base_url_environment}}"
+              ],
+              "path": [
+                "booking",
+                "1223"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Length",
+              "value": "7"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 06 Apr 2026 19:05:06 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"7-rM9AyJuqT6iOan/xHh+AW+7K/T8\""
+            },
+            {
+              "key": "Nel",
+              "value": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+            },
+            {
+              "key": "Report-To",
+              "value": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=W7hYJE4DIEI5ftyM9p7hgkcOfHzTn8Vcxz1RAOkd6wQ%3D\\u0026sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add\\u0026ts=1775502306\"}],\"max_age\":3600}"
+            },
+            {
+              "key": "Reporting-Endpoints",
+              "value": "heroku-nel=\"https://nel.heroku.com/reports?s=W7hYJE4DIEI5ftyM9p7hgkcOfHzTn8Vcxz1RAOkd6wQ%3D&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&ts=1775502306\""
+            },
+            {
+              "key": "Server",
+              "value": "Heroku"
+            },
+            {
+              "key": "Via",
+              "value": "1.1 heroku-router"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            }
+          ],
+          "cookie": [],
+          "body": "Created"
+        }
+      ]
+    },
+    {
+      "name": "Ping - HealthCheck",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url_environment}}/ping",
+          "host": [
+            "{{base_url_environment}}"
+          ],
+          "path": [
+            "ping"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url_restful_booker",
+      "value": "https://restful-booker.herokuapp.com"
+    }
+  ]
+}
